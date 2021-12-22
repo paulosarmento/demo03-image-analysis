@@ -60,7 +60,7 @@ layers:
 After successful deployment, you can invoke the deployed function by using the following command:
 
 ```bash
-serverless invoke --function hello
+sls invoke -f img-analysis --path request.json
 ```
 
 Which should result in response similar to the following:
@@ -68,7 +68,7 @@ Which should result in response similar to the following:
 ```json
 {
     "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v2.0! Your function executed successfully!\",\n  \"input\": {}\n}"
+    "body": "A imagem tem \n98.53 % de ser do tipo Grama\n98.53 % de ser do tipo planta\n97.88 % de ser do tipo cão\n97.88 % de ser do tipo canino\n97.88 % de ser do tipo animal de estimação\n97.88 % de ser do tipo mamífero\n97.88 % de ser do tipo animal"
 }
 ```
 
@@ -77,7 +77,7 @@ Which should result in response similar to the following:
 You can invoke your function locally by using the following command:
 
 ```bash
-serverless invoke local --function hello
+sls invoke local -f img-analysis --path request.json
 ```
 
 Which should result in response similar to the following:
@@ -85,6 +85,6 @@ Which should result in response similar to the following:
 ```
 {
     "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v2.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
+    "body": "A imagem tem \n98.53 % de ser do tipo Grama\n98.53 % de ser do tipo planta\n97.88 % de ser do tipo cão\n97.88 % de ser do tipo canino\n97.88 % de ser do tipo animal de estimação\n97.88 % de ser do tipo mamífero\n97.88 % de ser do tipo animal"
 }
 ```
